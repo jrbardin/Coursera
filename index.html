@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Car Finder</title>
+  <meta name="description" content="">
+  <meta name="author" content="Jess Bardin">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/default.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "libraries/widgets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  
+  <style>
+.author {
+  color: #13daec;
+}
+.reveal ul {
+  margin-bottom: 16px;
+}
+.reveal ul ul {
+  margin-bottom: 12px;
+}
+.reveal ul li {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+.reveal ul ul li {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+</style>
+
+<h2>Car Finder</h2>
+
+<p>Course project for Coursera&#39;s <br>
+<i>Developing Data Products</i>
+<br>
+<br></p>
+
+<div class="author">
+  <p><a href="https://github.com/jrbardin">Jess Bardin</a></p>
+  <p>Senior Analytics Developer</p>
+  <p><a href="http://www.elicitinsights.com">www.elicitinsights.com</a></p>
+</div>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Tring to find the perfect car?</h2>
+  <ul>
+<li>There are plenty of websites that offer car searches</li>
+<li>But nothing as sophisticated as what you&#39;ll see in a moment</li>
+<li>What if you could specify specific requirements like the following:
+
+<ul>
+<li>gas mileage</li>
+<li>horse power</li>
+<li>transmission</li>
+</ul></li>
+<li>And then see a list of matching cars in seconds</li>
+</ul>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Well, there&#39;s a Shiny app for that</h2>
+  <p><a href="https://bardin.shinyapps.io/course_project/">https://bardin.shinyapps.io/course_project/</a></p>
+
+<p><img src="assets/img/car_finder_app.png" alt="alt text"></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Using the world&#39;s most comprehensive automobile database</h2>
+  <pre><code class="r">head(mtcars)
+</code></pre>
+
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+</code></pre>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Using the app is simple</h2>
+  <ul>
+<li>Specify your minimum gas mileage requirement</li>
+<li>Specify your minimum horse power requirement</li>
+<li>Select the type of transmission you want</li>
+<li>(Obviously these are the only important factors for a car search)</li>
+<li>And hit the <i>Find!</i> button</li>
+</ul>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>And you have results in seconds</h2>
+  <p><img src="assets/img/car_finder_results.png" alt="alt text"></p>
+
+<p>Maserati Bora for me
+<br>
+<img src="assets/img/maserati-bora.jpg" alt="alt text"></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <script>  
+$(function (){ 
+  $("#example").popover(); 
+  $("[rel='tooltip']").tooltip(); 
+});  
+</script>  
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
